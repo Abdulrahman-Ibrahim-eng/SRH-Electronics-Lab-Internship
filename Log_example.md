@@ -13,11 +13,3 @@
 > ## Example:
 ## Day 5: 20/01/2024
  -Tested KY-004 Taster Module with Arduino Uno microcontroller (type: Joy-IT R3 DIP)
-
-
-# Weekly Log
-
-## Day 1: 23/01/2026:
--Opened up a GitHub account and repository
--Learned basic GitHub Desktop workflow
--KY-034 LED Flash Module test with Arduino UNO microcontroller (type: Joy-IT R3 DIP)
