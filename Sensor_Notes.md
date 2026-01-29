@@ -1,26 +1,26 @@
-### Sensor Notes
+# Sensor Notes
 ## Sensor 1: KY-034 LED Flash Module
-# Basic information:
+### Basic information:
 -Sensor name: KY-034 LED Flash Module
 -Purpose: Lightning 
 -Interface: Analog
 -Operating voltage: 5V
 -Reference: https://sensorkit.joy-it.net/en/sensors/ky-034
 
-# How it works:
+### How it works:
 -Electric current flows through the diode causing and excitation of electrons in the diode and once they return to their initial energy level a photon is emitted
 
-# Hardware setup:
+### Hardware setup:
 
-# Software setup:
+### Software setup:
 - Platform: Arduino Uno
 - Programming language: C
 - Library: None required
 
-# PIN connection
+### PIN connection
 <img width="634" height="707" alt="Screenshot 2026-01-23 205554" src="https://github.com/user-attachments/assets/8a31c207-2bf3-44ea-a05e-365bad8b87f1" />
 
-# Arduino sketch:
+### Arduino sketch:
 int led = 13; // Declaration of the LED input pin
  
 void setup() {
