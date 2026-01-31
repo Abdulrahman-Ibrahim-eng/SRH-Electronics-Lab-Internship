@@ -6,3 +6,6 @@
 
 ## Day 2: 29/01/2026
 -KY-037 Microphone Sensor Module test with Arduino UNO microcontroller (type: Joy-IT R3 DIP)
+
+## Day 3: 31/01/2026
+-KY-040 Rotary Encoder test with Arduino UNO microcontroller (type: Joy-IT R3 DIP) 
