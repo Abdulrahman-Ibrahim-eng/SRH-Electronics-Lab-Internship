@@ -1,5 +1,5 @@
 # Sensor Notes
-## Sensor 1: KY-034 LED Flash Module
+## Sensor 1: 
 ### Basic information:
 -Sensor name: KY-034 LED Flash Module
 -Purpose: Lightning 
@@ -32,7 +32,7 @@ void loop() {
   delay(2000); // Wait for another two seconds
 }
 
-## Sensor 2: KY-037 Microphone Sensor Module
+## Sensor 2: 
 ### Basic information:
 -Sensor name: KY-037 Microphone Sensor Module
 -Purpose: Input sound signals 
@@ -87,3 +87,28 @@ void loop () {
   }
   Serial.println("----------------------------------------------------------------");
   delay(1000);
+
+  ## Sensor 3: 
+  ### Basic information:
+  -Name: KY-40 Rotary Encoder
+  -Purpose: Machine controls
+  -Interface: Analog
+  -Operating voltage: 5V
+  -Reference: https://sensorkit.joy-it.net/en/sensors/ky-040
+
+  ### How it works:
+  -The state of the two outputs changes with each step, allowing the direction of rotation to be determined. The direction of rotation is determined by the sequence of the state changes of the outputs: Depending on which output changes state first, it is possible to detect whether the switch is turned clockwise or counterclockwise.
+
+  ## Hardware setup:
+  ### Software setup:
+- Platform: Arduino Uno
+- Programming language: C
+- Library: None required
+
+  ### PIN connection:
+  <img width="875" height="722" alt="Screenshot 2026-01-31 145313" src="https://github.com/user-attachments/assets/2b5ea803-1e8a-4df8-be07-a9f94f646256" />
+
+  ### Arduino sketch:
+  
+
+  
