@@ -109,6 +109,51 @@ void loop () {
   <img width="875" height="722" alt="Screenshot 2026-01-31 145313" src="https://github.com/user-attachments/assets/2b5ea803-1e8a-4df8-be07-a9f94f646256" />
 
   ### Arduino sketch:
+
+  ## Sensor 4:
+  ### Basic information:
+-Sensor name: KY-002 Vibration switch
+-Purpose: Detect vibrations
+-Interface: Analog
+-Operating voltage: 3.3V,5.0V
+-Reference: https://sensorkit.joy-it.net/en/sensors/ky-002
+
+### How it works:
+-The KY-002 shock and vibration sensor is a precise module for detecting shocks and vibrations. It consists of a conductive outer casing and an internal spring. In the event of shocks, the spring closes the contact to the outer casing and thus generates an electrical signal. This simple design enables reliable and fast detection of vibrations.
+
+## Hardware setup:
+### Software setup:
+- Platform: Arduino Uno
+- Programming language: C
+- Library: None required
+
+### PIN connection:
+<img width="710" height="699" alt="Screenshot 2026-02-01 161733" src="https://github.com/user-attachments/assets/8878d171-79df-43b8-bf1b-57615046c83a" />
+
+### Arduino sketch:
+int vib = 10; // Declaration of the sensor input pin
+int value; // Temporary variable
+  
+void setup ()
+{
+  pinMode(vib, INPUT); // Initialization sensor pin
+  digitalWrite(vib, HIGH); // Activation of internal pull-up resistor
+  Serial.begin(9600); // Initialization of the serial monitor
+  Serial.print("KY-002 Vibration detection");
+}
+  
+void loop ()
+{
+  // The current signal at the sensor is read out.
+  value = digitalRead(vib); 
+  // If a signal could be detected, this is displayed on the serial monitor.
+  if (value == LOW) {
+    Serial.println("Signal detected");
+    delay(100); // 100 ms break
+    }
+}
+
+
   
 
   
