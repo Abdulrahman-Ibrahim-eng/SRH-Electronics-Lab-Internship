@@ -1,11 +1,11 @@
 # Sensor Notes
 ## Sensor 1: 
 ### Basic information:
--Sensor name: KY-034 LED Flash Module
--Purpose: Lightning 
--Interface: Analog
--Operating voltage: 5V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-034
+- Sensor name: KY-034 LED Flash Module
+- Purpose: Lightning 
+- Interface: Analog
+- Operating voltage: 5V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-034
 
 ### How it works:
 -Electric current flows through the diode causing and excitation of electrons in the diode and once they return to their initial energy level a photon is emitted
@@ -34,11 +34,11 @@ void loop() {
 
 ## Sensor 2: 
 ### Basic information:
--Sensor name: KY-037 Microphone Sensor Module
--Purpose: Input sound signals 
--Interface: Analog
--Operating voltage: 5V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-037
+- Sensor name: KY-037 Microphone Sensor Module
+- Purpose: Input sound signals 
+- Interface: Analog
+- Operating voltage: 5V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-037
 
 ### How it works:
 -This sensor has two functional components on its circuit board: The front sensor unit, which physically measures the environment and outputs it as an analog signal to the second unit, the comparator. The comparator compares the measured value of the sensor with the value set on the rotary potentiometer and outputs a logical high signal on the digital pin and LED L1 if the value on the rotary potentiometer is exceeded.
