@@ -3,7 +3,7 @@
 ### Basic information:
 - Sensor name: KY-034 LED Flash Module
 - Purpose: Lightning 
-- Interface: Analog
+- Interface: Digital
 - Operating voltage: 5V
 - Reference: https://sensorkit.joy-it.net/en/sensors/ky-034
 
@@ -20,23 +20,13 @@
 <img width="634" height="707" alt="Screenshot 2026-01-23 205554" src="https://github.com/user-attachments/assets/8a31c207-2bf3-44ea-a05e-365bad8b87f1" />
 
 ### Arduino sketch:
-int led = 13; // Declaration of the LED input pin
- 
-void setup() {
-  pinMode(led, OUTPUT); // Initialization output pin for the LED
-}
-void loop() {
-  digitalWrite(led, HIGH); // LED is switched on
-  delay(4000); // Wait for 4 seconds
-  digitalWrite(led, LOW); // LED is switched off
-  delay(2000); // Wait for another two seconds
-}
+<img width="928" height="448" alt="Screenshot 2026-02-04 191405" src="https://github.com/user-attachments/assets/a69fed66-bd70-4724-a5e4-f5925d944c6a" />
 
 ## Sensor 2: 
 ### Basic information:
 - Sensor name: KY-037 Microphone Sensor Module
 - Purpose: Input sound signals 
-- Interface: Analog
+- Interface: Analog and digital(hybrid interface)
 - Operating voltage: 5V
 - Reference: https://sensorkit.joy-it.net/en/sensors/ky-037
 
@@ -53,46 +43,13 @@ void loop() {
 <img width="661" height="675" alt="Screenshot 2026-01-29 222115" src="https://github.com/user-attachments/assets/7d9b27d8-8c72-4f03-adbb-40bb46001c58" />
 
 ### Arduino sketch:
-// Declaration and initialization of the input pins
-int analog_input = A0; // Analog output of the sensor
-int digital_input = 3; // Digital output of the sensor
-  
-void setup () {
-  pinMode(analog_input, INPUT);
-  pinMode(digital_input, INPUT);
-  Serial.begin(9600); // Serial output with 9600 bps
-  Serial.println("KY-037 Noise detection");
-}
-  
-// The program reads the current values of the input pins
-// and prints them to the serial output
-void loop () {
-  float analog_value;
-  int digital_value;
-    
-  // Current values are read out, converted to the voltage value...
-  analog_value = analogRead(analog_input) * (5.0 / 1023.0); 
-  digital_value = digitalRead(digital_input);
-    
-  //... and printed at this point
-  Serial.print("Analog voltage value: "); 
-  Serial.print(analog_value, 4);
-  Serial.print(" V, \t Threshold value: ");
-  
-  if (digital_value == 1) {
-      Serial.println("reached");
-  }
-  else {
-      Serial.println("not yet reached");
-  }
-  Serial.println("----------------------------------------------------------------");
-  delay(1000);
+<img width="628" height="622" alt="Screenshot 2026-02-04 191542" src="https://github.com/user-attachments/assets/d327e6b5-4fa2-4997-9200-e8344d59878d" />
 
   ## Sensor 3: 
   ### Basic information:
   -Name: KY-40 Rotary Encoder
   -Purpose: Machine controls
-  -Interface: Analog
+  -Interface: Digital
   -Operating voltage: 5V
   -Reference: https://sensorkit.joy-it.net/en/sensors/ky-040
 
@@ -109,12 +66,13 @@ void loop () {
   <img width="875" height="722" alt="Screenshot 2026-01-31 145313" src="https://github.com/user-attachments/assets/2b5ea803-1e8a-4df8-be07-a9f94f646256" />
 
   ### Arduino sketch:
+  <img width="970" height="620" alt="Screenshot 2026-02-04 191636" src="https://github.com/user-attachments/assets/354b9ee5-6681-4b55-bb6f-015722b97289" />
 
   ## Sensor 4:
   ### Basic information:
 -Sensor name: KY-002 Vibration switch
 -Purpose: Detect vibrations
--Interface: Analog
+-Interface: Digital
 -Operating voltage: 3.3V,5.0V
 -Reference: https://sensorkit.joy-it.net/en/sensors/ky-002
 
@@ -131,27 +89,84 @@ void loop () {
 <img width="710" height="699" alt="Screenshot 2026-02-01 161733" src="https://github.com/user-attachments/assets/8878d171-79df-43b8-bf1b-57615046c83a" />
 
 ### Arduino sketch:
-int vib = 10; // Declaration of the sensor input pin
-int value; // Temporary variable
-  
-void setup ()
-{
-  pinMode(vib, INPUT); // Initialization sensor pin
-  digitalWrite(vib, HIGH); // Activation of internal pull-up resistor
-  Serial.begin(9600); // Initialization of the serial monitor
-  Serial.print("KY-002 Vibration detection");
-}
-  
-void loop ()
-{
-  // The current signal at the sensor is read out.
-  value = digitalRead(vib); 
-  // If a signal could be detected, this is displayed on the serial monitor.
-  if (value == LOW) {
-    Serial.println("Signal detected");
-    delay(100); // 100 ms break
-    }
-}
+<img width="563" height="399" alt="Screenshot 2026-02-04 191729" src="https://github.com/user-attachments/assets/13bb6518-4a61-4e30-92b3-b7d26291c97c" />
+
+## Sensor 5:
+### Basic information:
+-Sensor name: KY-052 
+-Purpose: Temperature and barometric pressure sensor
+-Interface: Digital
+-Operating voltage: 3.3V, 5.0V
+-Reference: https://sensorkit.joy-it.net/en/sensors/ky-052
+
+### How it works:
+-The BMP280 is a versatile sensor that measures both barometric pressure and temperature and outputs the results via the I2C bus. With this sensor you can capture precise air pressure and temperature values, making it ideal for applications such as weather stations, altimeters and mobile devices.
+
+## Hardware setup:
+### Software setup:
+- Platform: Arduino Uno
+- Programming language: C
+- Library: Adafruit BMP280
+
+### PIN connection:
+<img width="952" height="681" alt="Screenshot 2026-02-04 194149" src="https://github.com/user-attachments/assets/fdb3afc9-5b0b-4230-a7a6-d45eabc592a5" />
+
+### Arduino sketch:
+<img width="389" height="730" alt="Screenshot 2026-02-04 201017" src="https://github.com/user-attachments/assets/e2440098-6d7a-4e5b-95a5-cdcad10556e6" />
+
+## Sensor 6:
+### Basic information:
+-Sensor name: KY-023 
+-Purpose: Joystick Module(X-Y axis)
+-Interface: Analogue
+-Operating voltage: 5V
+-Reference: https://sensorkit.joy-it.net/en/sensors/ky-023
+
+### How it works:
+-This module detects the X and Y position of a joystick and outputs this as an analog voltage at the output pins. A separate potentiometer is installed for each axis, X and Y. In the idle state, the potentiometer is in the middle, which means that the resistances and therefore the voltages are the same.
+-If the position of the X or Y axis is changed, the resistances change depending on the new position. This change in resistance leads to different voltage values that can be measured between the resistors. This allows the exact position of the axis to be determined.
+
+## Hardware setup:
+### Software setup:
+- Platform: Arduino Uno
+- Programming language: C
+- Library: None required
+
+###  PIN connection:
+<img width="957" height="718" alt="Screenshot 2026-02-04 201503" src="https://github.com/user-attachments/assets/8bbddb68-7fde-4e1f-8e8a-70dea6fa6269" />
+
+### Arduino sketch:
+<img width="506" height="690" alt="Screenshot 2026-02-04 201614" src="https://github.com/user-attachments/assets/c82e9982-95c1-4a43-af9b-aabdad2ffb37" />
+
+## Sensor 7:
+### Basic information:
+-Sensor name: KY-006
+-Purpose: Passive Piezo-Buzzer
+-Interface: Analogue
+-Operating voltage: 3.3V, 5.0V
+-Reference: https://sensorkit.joy-it.net/en/sensors/ky-006
+
+### How it works:
+With this module, you can generate different sounds by controlling the passive piezo buzzer with PWM signals. PWM signals are special electrical signals that can be sent at different frequencies to generate different sounds. The buzzer can generate sounds in the range of 1.5 kHz to 2.5 kHz. 
+
+## Hardware setup:
+### Software setup:
+- Platform: Arduino Uno
+- Programming language: C
+- Library: None required
+
+###  PIN connection:
+<img width="766" height="749" alt="Screenshot 2026-02-04 204940" src="https://github.com/user-attachments/assets/eb03921b-0149-46fe-ac01-35d623872bcc" />
+
+## Arduino sketch:
+<img width="876" height="692" alt="Screenshot 2026-02-04 210330" src="https://github.com/user-attachments/assets/e3048cb8-661e-482d-8281-67c8f2a3d393" />
+
+
+
+
+
+
+
 
 
   
