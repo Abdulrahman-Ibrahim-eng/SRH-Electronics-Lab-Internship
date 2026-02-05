@@ -18,10 +18,6 @@
 - KY-023 Joysticke Module test with Arduino UNO microcontroller (type: Joy-IT R3 DIP)
 - KY-052 BMP280 Temperature and Barometric Pressure test with Arduino UNO microcontroller (type: Joy-IT R3 DIP)
 
-## Day 5: 04/02/2026
--
--
--
 
 
 
