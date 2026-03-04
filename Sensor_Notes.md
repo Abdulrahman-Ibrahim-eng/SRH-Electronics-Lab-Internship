@@ -47,11 +47,11 @@
 
   ## Sensor 3: 
   ### Basic information:
-  -Name: KY-40 Rotary Encoder
-  -Purpose: Machine controls
-  -Interface: Digital
-  -Operating voltage: 5V
-  -Reference: https://sensorkit.joy-it.net/en/sensors/ky-040
+  - Name: KY-40 Rotary Encoder
+  - Purpose: Machine controls
+  - Interface: Digital
+  - Operating voltage: 5V
+  - Reference: https://sensorkit.joy-it.net/en/sensors/ky-040
 
   ### How it works:
   -The state of the two outputs changes with each step, allowing the direction of rotation to be determined. The direction of rotation is determined by the sequence of the state changes of the outputs: Depending on which output changes state first, it is possible to detect whether the switch is turned clockwise or counterclockwise.
@@ -70,11 +70,11 @@
 
   ## Sensor 4:
   ### Basic information:
--Sensor name: KY-002 Vibration switch
--Purpose: Detect vibrations
--Interface: Digital
--Operating voltage: 3.3V,5.0V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-002
+- Sensor name: KY-002 Vibration switch
+- Purpose: Detect vibrations
+- Interface: Digital
+- Operating voltage: 3.3V,5.0V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-002
 
 ### How it works:
 -The KY-002 shock and vibration sensor is a precise module for detecting shocks and vibrations. It consists of a conductive outer casing and an internal spring. In the event of shocks, the spring closes the contact to the outer casing and thus generates an electrical signal. This simple design enables reliable and fast detection of vibrations.
@@ -93,11 +93,11 @@
 
 ## Sensor 5:
 ### Basic information:
--Sensor name: KY-052 
--Purpose: Temperature and barometric pressure sensor
--Interface: Digital
--Operating voltage: 3.3V, 5.0V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-052
+- Sensor name: KY-052 
+- Purpose: Temperature and barometric pressure sensor
+- Interface: Digital
+- Operating voltage: 3.3V, 5.0V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-052
 
 ### How it works:
 -The BMP280 is a versatile sensor that measures both barometric pressure and temperature and outputs the results via the I2C bus. With this sensor you can capture precise air pressure and temperature values, making it ideal for applications such as weather stations, altimeters and mobile devices.
@@ -116,11 +116,11 @@
 
 ## Sensor 6:
 ### Basic information:
--Sensor name: KY-023 
--Purpose: Joystick Module(X-Y axis)
--Interface: Analogue
--Operating voltage: 5V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-023
+- Sensor name: KY-023 
+- Purpose: Joystick Module(X-Y axis)
+- Interface: Analogue
+- Operating voltage: 5V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-023
 
 ### How it works:
 -This module detects the X and Y position of a joystick and outputs this as an analog voltage at the output pins. A separate potentiometer is installed for each axis, X and Y. In the idle state, the potentiometer is in the middle, which means that the resistances and therefore the voltages are the same.
@@ -140,11 +140,11 @@
 
 ## Sensor 7:
 ### Basic information:
--Sensor name: KY-006
--Purpose: Passive Piezo-Buzzer
--Interface: Analogue
--Operating voltage: 3.3V, 5.0V
--Reference: https://sensorkit.joy-it.net/en/sensors/ky-006
+- Sensor name: KY-006
+- Purpose: Passive Piezo-Buzzer
+- Interface: Analogue
+- Operating voltage: 3.3V, 5.0V
+- Reference: https://sensorkit.joy-it.net/en/sensors/ky-006
 
 ### How it works:
 With this module, you can generate different sounds by controlling the passive piezo buzzer with PWM signals. PWM signals are special electrical signals that can be sent at different frequencies to generate different sounds. The buzzer can generate sounds in the range of 1.5 kHz to 2.5 kHz. 
